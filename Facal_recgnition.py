@@ -3,9 +3,10 @@ from PIL import Image
 from autocrop import Cropper
 
 
-cropper = Cropper()
 
-def crop_image(image_path):
+
+def crop_image(image_path, wgth, hght):
+    cropper = Cropper(width=wgth, height=hght)
     image= cropper.crop(image_path)
 
     cropped_image = Image.fromarray(image)
